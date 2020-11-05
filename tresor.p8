@@ -117,6 +117,20 @@ function interact(x,y)
 		 create_msg("chloe","bienvenue a ada",
 	"file au tableau")
   end
+  if x==21 and y==0 then
+		 create_msg("tableau","pour avoir un stage",
+	"il te faudra 3 outils")
+  end
+  if x==24 and y==0 then
+		 create_msg("tableau","les anciens ont laisse",
+	"des affaires dans les poubelles")
+  end
+  if x==25 and y==0 then
+		 create_msg("tableau","cherche dans la doc")
+  end
+  if x==28 and y==0 then
+		 create_msg("tableau","verifie les tables")
+  end
 end
 
 function draw_player()
@@ -142,6 +156,8 @@ function outline(text,x,y)
 	print(text,x,y+1,0)
 	print(text,x,y,7)
 end
+
+
 	
 -->8
 --message
@@ -170,7 +186,10 @@ function draw_msg()
  if p.x>16 and p.x<31 then
 	x=128
 	end
-		
+	rectfill(x+6+1,y+1,
+		x+6+#msg_title*4+2,y+6+1,0)
+	rectfill(x+2+1,y+9+1,x+125+1,y+20+1,0)
+	
 	rectfill(x+6,y,
 		x+6+#msg_title*4,y+6,14)
 	rectfill(x+2,y+9,x+125,y+20,2)
@@ -179,6 +198,7 @@ function draw_msg()
 	end
 end
 	
+
 __gfx__
 0000000011b311000000000000000000000000009949994999999999000000000000000000000000000000000000000000000000000000000000000000000000
 000000001b3881000000000000000000000000009944444499999999000000000000000000000000000000000000000000000000000000000000000000000000
